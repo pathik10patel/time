@@ -25,5 +25,6 @@ jobs:
          command: |
            cd format/
            pwd
+           ls -l
            go get ./
-           go build
+
