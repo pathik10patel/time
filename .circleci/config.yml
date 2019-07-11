@@ -20,7 +20,7 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: ls -l
-      - run: echo $$GOPATH
+      - run: echo $GOPATH
       - run:
          name: Validate service is working
          command: |
