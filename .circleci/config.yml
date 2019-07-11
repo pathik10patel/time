@@ -19,7 +19,7 @@ jobs:
 #      - checkout
 
       # specify any bash command here prefixed with `run: `
-      - run: ll
+      - run: ls -l
       - run: cd format/
       - run: pwd
       - run: go get ./
