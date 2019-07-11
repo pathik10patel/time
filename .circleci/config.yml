@@ -39,13 +39,13 @@ jobs:
            mv format output/
 
       - store_artifacts:
-          path: output
+          path: format/output/
           destination: /output/
 
       - run:
          name: Running the service
          command: |
-           cd output
+           cd format/output
            ./format          
            
 
