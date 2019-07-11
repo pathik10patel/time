@@ -14,11 +14,16 @@ jobs:
     #### expecting it in the form of
     ####   /go/src/github.com/circleci/go-tool
     ####   /go/src/bitbucket.org/circleci/go-tool#
-#    working_directory: ~/
+    working_directory: /go/src/github.com/
     steps:
       - checkout
 
       # specify any bash command here prefixed with `run: `
+      - run:
+         name: try
+         command: |
+           cd /go/src/github.com/
+           ls -l
       - run: ls -l
       - run: echo $GOPATH
       - run:
