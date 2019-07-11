@@ -20,7 +20,10 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: ls -l
-      - run: cd format/
-      - run: pwd
-      - run: go get ./
-      - run: go build
+       - run:
+          name: Validate service is working
+          command: |
+            cd format/
+            pwd
+            go get ./
+            go build
