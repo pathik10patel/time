@@ -35,4 +35,17 @@ jobs:
            go get ./
            go build
            ls -l
+           mkdir output
+           mv format output/
+
+      - store_artifacts:
+          path: output
+          destination: /output/
+
+      - run:
+         name: Running the service
+         command: |
+           cd output
+           ./format          
+           
 
